@@ -1,0 +1,31 @@
+# Visual Studio / Rider ignores
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.sln.docstates
+
+# VS Code ignores
+.vscode/
+
+# Project files and folders
+*.pdb
+*.pidb
+*.dll
+*.exe
+*.log
+*.bak
+*.ncb
+*.resource
+*.sdf
+*.opensdf
+*.vsp
+*.vsnc
+*.resharper
+
+# Xamarin / Android specific ignores
+App4.Android/obj/
+App4.Android/bin/
+App4.Android/.vs/
+App4.Android/R.txt
+App4.Android/assets/

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.Page5"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
+    <ContentPage.Content>
+        <StackLayout>
+            <progressBar:SfLinearProgressBar Progress="{Binding Score}" TrackColor="#3390a84e" TrackHeight="10" CornerRadius="20" ProgressColor="DarkGreen" ></progressBar:SfLinearProgressBar>
+
+            <!--Using circular progress bar-->
+            <progressBar:SfCircularProgressBar Progress="{Binding Score}" TrackColor="#3390a84e" ProgressColor="DarkGreen" StartAngle="180" EndAngle="360"/>
+            <TableView Intent="Settings">
+                    <TableRoot>
+                    <TableSection Title="KYC">
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="First Name"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding Fname}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                                <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                    <Label Text="Last Name"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding Sname}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                                </StackLayout>
+                            </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="KYC ID"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding ID}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="Date Of Birth"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding DOB}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="Address"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding Address}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="Mailing Address"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding MAddress}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="Account Number"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding ANum}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="Client Knowledge"
+                                 TextColor="DarkGreen" VerticalOptions="Center" />
+                                <Label Text="{Binding CK}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="Paper Mailing?"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding PM}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                        <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                            <Label Text="Government Doc Attached"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                            <Label Text="{Binding GDA}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                        </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="PEP Check"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding PEP}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Padding ="10,0,10,0" Orientation="Horizontal">
+                                <Label Text="Source of Wealth"
+                                 TextColor="DarkGreen" VerticalOptions="Center"/>
+                                <Label Text="{Binding SOW}"
+                                 HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                 TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+
+                    </TableSection>
+                    </TableRoot>
+                </TableView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

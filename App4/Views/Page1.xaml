@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView >
+                <TableRoot>
+                    <TableSection Title="Client" >
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding = "10">
+                                <Label Text="{Binding MyStringProperty, StringFormat = 'Name : \{0\}'}" FontSize = "14"
+                                 HorizontalOptions="CenterAndExpand"
+                                 TextColor="#52226b" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding = "10">
+                                <Label Text="{Binding MyStringProperty2, StringFormat = 'Nationality : \{0\}'}" FontSize = "14"
+                                 HorizontalOptions="CenterAndExpand"
+                                 TextColor="#52226b" />
+                            </StackLayout>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding = "10">
+                                <Label Text="{Binding Sector, StringFormat = 'Sector : \{0\}'}" FontSize = "14"
+                                 HorizontalOptions="CenterAndExpand"
+                                 TextColor="#52226b" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding = "10">
+                                <Label Text="{Binding Score, StringFormat = 'Offline Minutes Spent : \{0\}'}" FontSize = "14"
+                                 HorizontalOptions="CenterAndExpand"
+                                 TextColor="#52226b" />
+                            </StackLayout>
+                        </ViewCell>
+
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <StackLayout Orientation="Horizontal" Padding = "10" MinimumHeightRequest="100">
+                <Label Text="{Binding Domicile, StringFormat = 'Domicile : \{0\}'}" FontSize = "14"
+                                 HorizontalOptions="CenterAndExpand"
+                                 TextColor="#52226b" />
+            </StackLayout>
+
+            <StackLayout Margin="00">
+                <Label Text="Add Meeting Time" FontSize="14" TextColor="Black" HorizontalOptions="Center" Margin="0,20,0,0" FontAttributes="Bold"/>
+
+                <!-- Picker control to select a score -->
+                <Picker x:Name="picker" Title="Select a score" Margin="0,20,0,0" />
+
+                <!-- Button control to add the selected score -->
+                <Button x:Name="addScoreButton" Text="Add score" Margin="0,20,0,0"
+                Clicked="OnAddScoreClicked"  BackgroundColor="#52226B"/>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

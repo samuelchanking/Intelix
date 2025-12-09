@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.profile"
+             Shell.NavBarIsVisible="True"
+             NavigationPage.HasNavigationBar="True"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Profile">
+
+    <ContentPage.Content>
+        <StackLayout Padding="0,10,0,0">
+            <StackLayout>
+
+                <Image Source="helloprofile.png" />
+
+                
+            </StackLayout>
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection>
+                       
+                            
+                        
+                       </TableSection>
+                    <TableSection Title="Username">
+
+                        <EntryCell x:Name="RandomLabelP1" Placeholder="Username"/>
+
+
+                    </TableSection>
+                    <TableSection Title="Email">
+
+                        <EntryCell x:Name="RandomLabelP2" Placeholder="Email"/>
+
+
+                    </TableSection>
+                    <TableSection Title="Name">
+
+                        <EntryCell x:Name="RandomLabelP3" Placeholder="First Name"/>
+
+
+
+                        <EntryCell x:Name="RandomLabelP4" Placeholder="Second Name"/>
+
+
+                    </TableSection>
+                    <TableSection>
+                        <ViewCell Height="70">
+                            <StackLayout Orientation="Horizontal" Padding="10,5,0,0">
+                                
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+
+
+            </TableView>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout VerticalOptions="Center">
+                    <Button WidthRequest="200" HeightRequest="50" Text="Save Preferences" TextColor="#31507F" BackgroundColor="#E5E5E5"/>
+                </StackLayout>
+                
+
+
+                <Image Source="colors.png" Scale="1" HorizontalOptions="EndAndExpand" VerticalOptions="End"/>
+                
+            </StackLayout>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

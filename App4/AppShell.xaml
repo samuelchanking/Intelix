@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:App4.Views"
+       Title="App4"
+       x:Class="App4.AppShell"
+       NavigationPage.HasNavigationBar="false" >
+
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#E5E5E5" />
+                <Setter Property="Shell.ForegroundColor" Value="BLACK" />
+                <Setter Property="Shell.TitleColor" Value="#000000" />
+                
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#E5E5E5" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="Gray"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#52226B"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Home" Icon="home.png" Route="Home" ContentTemplate="{DataTemplate local:Page3}" />
+        <ShellContent Title="Assistant" Icon="__image_hand_holding.png" ContentTemplate="{DataTemplate local:AssistantPage}" />
+        <ShellContent Title="Settings" Icon="__image_frame.png" Route="Settings" ContentTemplate="{DataTemplate local:Settings}" />
+    </TabBar>
+
+
+
+
+</Shell>

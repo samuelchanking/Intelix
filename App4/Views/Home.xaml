@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.Home"
+             xmlns:vm="clr-namespace:App4.ViewModels"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             Title="Hello"
+             NavigationPage.HasNavigationBar="false"
+             Shell.NavBarIsVisible="False">
+    
+
+    <ScrollView>
+        <StackLayout Padding="0,20,0,0"
+                 Spacing="5">
+
+
+            <ImageButton x:Name="__image_user"
+					Source="__image_user.png"
+                    Clicked="Button_Clicked3"
+                   BackgroundColor="White"
+                         
+                    
+                       />
+            <Label x:Name="george"
+					FontFamily="Open Sans"
+					FontSize="36"
+					TextColor="white"
+					Text="George"
+                    HorizontalOptions="Center"
+				 />
+            <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
+                <cards:SfCardView BorderColor="white" BorderWidth="2" CornerRadius="30,0,30,0" BackgroundColor="white"  >
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="New York" FontSize="20"  TextColor="Black" />
+                        <Label Text="Mon 3.00PM, Sunny" TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="31*" FontSize="40" Padding="0, 0, 10,0"/>
+                            <Image  Source="Sun.png" HeightRequest="50" WidthRequest="250"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+            </StackLayout>
+
+            <cards:SfCardLayout ShowSwipedCard="true" SwipeDirection="Left" HeightRequest="250" >
+                <cards:SfCardLayout.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS"
+                    Value="0,50,0,50" />
+                    </OnPlatform>
+                </cards:SfCardLayout.Margin>
+
+
+                <cards:SfCardView BorderColor="white" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Client Interactions (Scoreboard)" FontSize="25" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Update:" TextColor="Black" FontSize="16"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="New Update" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButton6" Text="Button" BackgroundColor="white" CornerRadius="20" WidthRequest="100"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </cards:SfCardView>
+
+
+
+                <cards:SfCardView BorderColor="white" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Market Updates" FontSize="25" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Update:" TextColor="Black" FontSize="16"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="New Update" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButton5" Text="Button" BackgroundColor="white" CornerRadius="20" WidthRequest="100" Clicked="GoGoogle"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="white" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Trading Activity" FontSize="25" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Update:" TextColor="Black" FontSize="16"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="New Update" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButton4" Text="Button" BackgroundColor="white" CornerRadius="20" WidthRequest="100"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="white" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Securities" FontSize="25" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Update:" TextColor="Black" FontSize="16"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="New Update" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButton3" Text="Button" BackgroundColor="white" CornerRadius="20" WidthRequest="100"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="white" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Portfolios" FontSize="25" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Update:" TextColor="Black" FontSize="16"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="New Update" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButton2" Text="Button" BackgroundColor="{Binding HeadColorAA, StringFormat='#\{0\}'}" CornerRadius="20" WidthRequest="100"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="white" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Clients" FontSize="25" TextColor="white" FontAttributes="Bold"/>
+                        <Label Text="Update:" TextColor="Black" FontSize="16"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="New Update" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Button x:Name="SfButton" Text="Button" BackgroundColor="white" CornerRadius="20" WidthRequest="100" Clicked="Button_Clicked4"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+
+            </cards:SfCardLayout>
+            
+        </StackLayout>
+
+    </ScrollView>
+    
+</ContentPage>

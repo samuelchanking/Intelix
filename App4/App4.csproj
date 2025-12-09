@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Class1.cs" />
+    <Compile Remove="Models\Class2.cs" />
+    <Compile Remove="Models\Class3.cs" />
+    <Compile Remove="ViewModels\ItemsViewModel.cs" />
+    <Compile Remove="Views\Client.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\Client.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="2.2.5" />
+    <PackageReference Include="Plugin.Fingerprint" Version="2.1.5" />
+    <PackageReference Include="Plugin.LocalNotification" Version="9.2.0" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="21.1.38" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="21.1.38" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataGrid" Version="21.1.39" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="21.1.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaps" Version="21.1.39" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="21.1.41" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="21.1.41" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />  
+    <PackageReference Include="Xamarin.Forms.Maps" Version="5.0.0.2196" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\AssistantPage.xaml.cs">
+      <DependentUpon>AssistantPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Accessibility.xaml.cs">
+      <DependentUpon>Accessibility.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\port.xaml.cs">
+      <DependentUpon>port.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Page5.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Page6.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\port.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\profile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

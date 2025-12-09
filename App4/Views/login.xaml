@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.login">
+    <ContentPage.Content>
+        <ScrollView>
+            <AbsoluteLayout>
+
+
+                <AbsoluteLayout x:Name="page_log_in_2_ek1"
+				 AbsoluteLayout.LayoutBounds="0,0,428,926"
+				 >
+
+                    <BoxView x:Name="_bg__log_in_2_ek2"
+					Color="#FFFFFF"
+					AbsoluteLayout.LayoutBounds="0,0,428,926" />
+
+                    <AbsoluteLayout x:Name="input"
+					 AbsoluteLayout.LayoutBounds="27,230,373,85"
+					 >
+
+                        <Label x:Name="title"
+						FontFamily="Inter"
+						FontSize="14"
+						TextColor="#52226B"
+						AbsoluteLayout.LayoutBounds="0,0,88,28"
+						Text="ID number"
+					 />
+
+                        <AbsoluteLayout x:Name="input_field"
+						 AbsoluteLayout.LayoutBounds="0,24,353,56"
+						 >
+
+                            <Entry x:Name="Userentry" 
+							FontFamily="Inter"
+							FontSize="14"
+							TextColor="#000000"
+							AbsoluteLayout.LayoutBounds="16,18,370,51"
+							Placeholder ="UserID"
+                                   Keyboard="Numeric"
+                                   
+                            
+						 >
+
+                            </Entry>
+
+                            <AbsoluteLayout x:Name="icon"
+							 AbsoluteLayout.LayoutBounds="317,18,20,20"
+							 >
+
+
+                                <AbsoluteLayout x:Name="eye"
+								 AbsoluteLayout.LayoutBounds="1,2,17,15"
+								 >
+
+                                    <Image x:Name="vector"
+									Source="vector.png"
+									AbsoluteLayout.LayoutBounds="1,0,15.24,15" />
+                                    <Image x:Name="vector_ek1"
+									Source="vector_ek1.png"
+									AbsoluteLayout.LayoutBounds="0,1,17,12.6" />
+                                    <Image x:Name="vector_ek2"
+									Source="vector_ek2.png"
+									AbsoluteLayout.LayoutBounds="6,5,5.69,5.6" />
+                                </AbsoluteLayout>
+
+                            </AbsoluteLayout>
+
+                        </AbsoluteLayout>
+
+                    </AbsoluteLayout>
+
+
+                    <AbsoluteLayout x:Name="input_ek1"
+					 AbsoluteLayout.LayoutBounds="27,339,373,85"
+					 >
+
+                        <Label x:Name="title_ek1"
+						FontFamily="Inter"
+						FontSize="14"
+						TextColor="#52226B"
+						AbsoluteLayout.LayoutBounds="0,2.5,84,28"
+						Text="Password"
+					 />
+
+                        <AbsoluteLayout x:Name="input_field_ek1"
+						 AbsoluteLayout.LayoutBounds="0,26.5,353,56"
+						 >
+
+                            <Entry IsPassword="true" x:Name="Pass" Placeholder="Password"
+							FontFamily="Inter"
+							FontSize="14"
+							TextColor="#000000"
+							AbsoluteLayout.LayoutBounds="16,18,352,51"
+							
+						 />
+
+
+                            <AbsoluteLayout x:Name="icon_ek1"
+							 AbsoluteLayout.LayoutBounds="317,18,20,20"
+							 >
+
+
+
+                                <AbsoluteLayout x:Name="eye_ek1"
+								 AbsoluteLayout.LayoutBounds="1,2,17,15"
+								 >
+
+                                    <Image x:Name="vector_ek3"
+									Source="vector_ek3.png"
+									AbsoluteLayout.LayoutBounds="1,0,15.24,15" />
+                                    <Image x:Name="vector_ek4"
+									Source="vector_ek4.png"
+									AbsoluteLayout.LayoutBounds="0,1,17,12.6" />
+                                    <Image x:Name="vector_ek5"
+									Source="vector_ek5.png"
+									AbsoluteLayout.LayoutBounds="6,5,5.69,5.6" />
+                                </AbsoluteLayout>
+
+                            </AbsoluteLayout>
+
+                        </AbsoluteLayout>
+
+                    </AbsoluteLayout>
+                    <Label x:Name="pwstaus"
+                                   Text="*Incorrect Password"
+                                   FontFamily="Inter"
+                                   FontSize="14"
+                                   TextColor="Red"
+                                   AbsoluteLayout.LayoutBounds="110,341.5,352,50"
+                                   IsVisible="false"
+                           FontAttributes="Bold"/>
+                    <Label x:Name="mtpw"
+                                   Text="*Field cannot be empty"
+                                   FontFamily="Inter"
+                                   FontSize="14"
+                                   TextColor="Red"
+                                   AbsoluteLayout.LayoutBounds="110,341.5,352,50"
+                                   IsVisible="false"
+                           FontAttributes="Bold"/>
+                    <Label x:Name="mtid"
+                                   Text="*Field cannot be empty"
+                                   FontFamily="Inter"
+                                   FontSize="14"
+                                   TextColor="Red"
+                                   AbsoluteLayout.LayoutBounds="110,230,352,50"
+                                   IsVisible="false"
+                           FontAttributes="Bold"/>
+                    <Label x:Name="hi__welcome_"
+					FontFamily="Poppins"
+					FontAttributes="Bold"
+					FontSize="30"
+					TextColor="#52226B"
+					AbsoluteLayout.LayoutBounds="27,148,247,63"
+					Text="Hi, Welcome!"
+				 />
+                    <Label x:Name="remember_me"
+					FontFamily="Inter"
+					FontSize="14"
+					TextColor="#000000"
+					AbsoluteLayout.LayoutBounds="61,441,120,29"
+					Text="Remember me"
+				 />
+                    <Image x:Name="image_296"
+					Source="image_296.png"
+					AbsoluteLayout.LayoutBounds="247,153,31,32" />
+                    <Label x:Name="forgot_password_" 
+					FontFamily="Inter"
+					FontSize="14"
+					TextColor="#52226B"
+					AbsoluteLayout.LayoutBounds="204,441,145,29"
+					Text="Forgot password?"
+				 />
+
+                    <AbsoluteLayout x:Name="checkbox___on_"
+					 AbsoluteLayout.LayoutBounds="27,440,21,21"
+					 >
+
+                        <BoxView x:Name="ellipse_185"
+						Color="#52226A"
+						AbsoluteLayout.LayoutBounds="0,0,21,21" />
+                        <Image x:Name="vector_2"
+						Source="vector_2.png"
+						AbsoluteLayout.LayoutBounds="5.77,7.88,9.45,5.77" />
+                    </AbsoluteLayout>
+
+
+
+                    <StackLayout Margin="27,506">
+                        <Button Text="Log In" FontSize="16" 
+                        TextColor="#FFFFFF"
+                        FontFamily="Inter"
+                        VerticalOptions="Center"
+                        BackgroundColor="#52226A"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="330"
+                        HeightRequest="75"
+						Clicked="Button_Clicked"
+                       
+                         />
+
+                        <Button Text="Biometric Log In" FontSize="16" 
+                        TextColor="#FFFFFF"
+                        FontFamily="Inter"
+                        VerticalOptions="End"
+                        BackgroundColor="#31507F"
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="330"
+                        HeightRequest="75"
+						Clicked="Button_Clicked1"
+                       
+                         />
+                    </StackLayout>
+
+
+
+                </AbsoluteLayout>
+            </AbsoluteLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

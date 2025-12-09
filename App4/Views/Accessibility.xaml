@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.Accessibility"
+             Title="Accessibility"
+             
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Shell.NavBarIsVisible="True"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <TableView Intent="Settings" HasUnevenRows="True">
+                <TableRoot>
+                    <TableSection Title="Colourblind Setting" TextColor="Black">
+                        <ViewCell Height="70">
+                            <StackLayout Orientation="Horizontal" Padding="17,10,0,0">
+                                <Label Text="Colourblind Compatibility"
+                                 FontSize="14" HorizontalOptions="Start" TextColor ="{Binding HeadColor, StringFormat='#\{0\}'}"/>
+                                <Button Text=">" Scale="0.5" HorizontalOptions="EndAndExpand" BackgroundColor="{Binding HeadColor, StringFormat='#\{0\}'}" Clicked="ChangeCB"/>
+
+                            </StackLayout>
+                        </ViewCell>
+
+                    </TableSection>
+                    <TableSection Title="Text Options" TextColor="Black">
+
+                        <ViewCell Height="70">
+                            <StackLayout Orientation="Horizontal" Padding="17,10,0,0">
+                                <Label Text="Text Options"
+                                 FontSize="14" HorizontalOptions="Start" TextColor ="{Binding HeadColor, StringFormat='#\{0\}'}"/>
+                                <Button Text=">" Scale="0.5" HorizontalOptions="EndAndExpand" BackgroundColor="{Binding HeadColor, StringFormat='#\{0\}'}" Clicked="ChangeText" />
+
+
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell Height="70">
+                            <StackLayout Orientation="Horizontal" Padding="17,10,0,0">
+                                <Label Text="High Contrast"
+                                 FontSize="14" HorizontalOptions="Start" TextColor ="{Binding HeadColor, StringFormat='#\{0\}'}"/>
+                                <Button Text=">" Scale="0.5" HorizontalOptions="EndAndExpand" BackgroundColor="{Binding HeadColor, StringFormat='#\{0\}'}" Clicked="ChangeHC" />
+
+
+                            </StackLayout>
+                        </ViewCell>
+
+
+                    </TableSection>
+
+
+                </TableRoot>
+            </TableView>
+            <Image Source="{Binding HeadColor, StringFormat='_\{0\}.png'}" Scale="1" HorizontalOptions="End" VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

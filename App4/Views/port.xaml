@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+xmlns:datagrid="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             Title="Portfolio"
+             x:Class="App4.Views.port">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <listview:SfListView x:Name="listviewp" SelectionBackgroundColor="White"  AutoFitMode="DynamicHeight" VerticalOptions="FillAndExpand"
+HeightRequest="600" ItemSpacing="5,10,5,0" BackgroundColor="white">
+
+                    <listview:SfListView.ItemTemplate >
+
+                        <DataTemplate>
+
+                            <Frame x:Name="frame" CornerRadius="10" HasShadow="True" Padding="5" BackgroundColor="white" BorderColor="DarkGray">
+                                <Grid BackgroundColor="#LightGray">
+                                    <Grid.GestureRecognizers>
+                                    </Grid.GestureRecognizers>
+                                    <Grid.RowDefinitions>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.RowSpan = "2"   HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Text="{Binding proID, StringFormat = 'Portfolio ID : \{0\}'}" TextColor="Black" />
+
+
+                                    <StackLayout Grid.Row="0"
+               Grid.Column="1" VerticalOptions="Center" Grid.RowSpan="2">
+
+
+                                        <Label FontAttributes="Bold" TextColor="Black"
+              Text="{Binding inival,  StringFormat = 'Value : \{0\}'}" VerticalOptions="Center" HorizontalOptions="Start"
+          />
+                                        <Label FontAttributes="Italic" TextColor="Black"
+              Text="{Binding currency,  StringFormat = 'Currency : \{0\}'}" VerticalOptions="End"></Label>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="2" Grid.Row="0" >
+                                        <Image Source="{Binding img}">
+                                        </Image>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+                                        <Label FontAttributes="Bold" TextColor="Black"
+               Text="{Binding status, StringFormat = 'Status : \{0\}'}" VerticalOptions="CenterAndExpand" HorizontalOptions="End"></Label>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" >
+                                        <Label FontAttributes="Bold" TextColor="Black"
+               Text="{Binding clientID, StringFormat = 'Client ID : \{0\}'}" VerticalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+
+
+
+
+
+                                    <!--<StackLayout Grid.Row="0"
+               Grid.Column="2" VerticalOptions="Center" Grid.RowSpan="2">
+                            <Label  TextColor="Black"
+               Text="{Binding sector}" VerticalOptions ="Start" FontAttributes="Bold"/>
+
+                            <Label TextColor="Black"
+               Text="{Binding Status}" FontAttributes="Italic" 
+          />
+                            <Label TextColor="Black"
+               Text="{Binding Domicile}" FontAttributes="Italic" 
+          />
+
+
+                        </StackLayout>-->
+
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </listview:SfListView.ItemTemplate>
+                </listview:SfListView>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

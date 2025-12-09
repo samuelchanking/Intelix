@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.AssistantPage"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             Title="}"
+             xmlns:local="clr-namespace:App4.ViewModels"  
+             xmlns:model="clr-namespace:App4.Models"  
+             
+             NavigationPage.HasNavigationBar="false"
+             Shell.NavBarIsVisible="False">
+
+
+    <ScrollView>
+        <StackLayout 
+                 Spacing="0" Padding="0,0,0,0">
+            <Image x:Name="hello123"
+					Source="hello.png" 
+                    HorizontalOptions="CenterAndExpand"/>
+
+
+
+
+            <StackLayout  HorizontalOptions="Center" VerticalOptions="Center" Padding="0,10,0,0">
+                <cards:SfCardView BorderColor="#52226B" BorderWidth="2" CornerRadius="10,10,10,10" BackgroundColor="white"  >
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="New York" FontSize="20"  TextColor="Black" />
+                        <Label Text="Mon 3.00PM, Sunny" TextColor="Black"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="31*" FontSize="40" Padding="0, 0, 10,0"/>
+                            <Image  Source="Sun.png" HeightRequest="50" WidthRequest="250"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+            </StackLayout>
+
+
+            <cards:SfCardLayout ShowSwipedCard="true" SwipeDirection="Left" HeightRequest="250" >
+                <cards:SfCardLayout.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS"
+                    Value="0,50,0,50" />
+                    </OnPlatform>
+                </cards:SfCardLayout.Margin>
+
+
+
+
+
+
+                <cards:SfCardView BorderColor="Blue" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Market Updates" FontSize="25" TextColor="Blue" FontAttributes="Bold"/>
+                        <Label Text="Description:" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Stay up-to-date on the latest financial news and stock market updates with Yahoo! Finance" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButtonA5" Text="Enter" BackgroundColor="Blue" CornerRadius="20" WidthRequest="100" Clicked="SfButtonBB_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="#99005b" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Trading Activities" FontSize="25" TextColor="#99005b" FontAttributes="Bold"/>
+                        <Label Text="Description:" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Keep track of all of your clients' BUY and SELL trading activities, powered by Intelix's Security Algorithm" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButtonA4" Text="Enter" BackgroundColor="#99005b" CornerRadius="20" WidthRequest="100" Clicked="SfButtonA4_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="#cc5500" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Securities" FontSize="25" TextColor="#cc5500" FontAttributes="Bold"/>
+                        <Label Text="Description:" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Find out more details about current security pricing and discover anomalies using Intelix's Security Algorithm" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButtonA3" Text="Enter" BackgroundColor="#cc5500" CornerRadius="20" WidthRequest="100" Clicked="SfButtonA3_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="#013220" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="KYC" FontSize="25" TextColor="#013220" FontAttributes="Bold"/>
+                        <Label Text="Description:" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Be more involved in your clients' onboarding process using Intelix's Automated KYC Tracker" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="B3" Text="Enter" BackgroundColor="#013220" CornerRadius="20" WidthRequest="100" Clicked="SfButtonA2_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="DarkBlue" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Portfolio" FontSize="25" TextColor="DarkBlue" FontAttributes="Bold"/>
+                        <Label Text="Description:" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="View all of your clients' portfolios on one, simple page" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="B2" Text="Enter" BackgroundColor="DarkBlue" CornerRadius="20" WidthRequest="100" Clicked="SfButtonA6_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+
+                <cards:SfCardView BorderColor="#52226B" BorderWidth="2"  BackgroundColor="#F0F0F0">
+                    <StackLayout Padding="10, 10, 0, 0" >
+                        <Label  Text="Clients" FontSize="25" TextColor="#52226B" FontAttributes="Bold"/>
+                        <Label Text="Description:" TextColor="Black" FontSize="16" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Meet with your clients offline to hit your weekly target using Intelix's Social Scoreboard, and learn more about them" FontSize="16" Padding="0, 0, 10,0" TextColor="Black"/>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <buttons:SfButton x:Name="SfButtonA" Text="Enter" BackgroundColor="#52226B" CornerRadius="20" WidthRequest="100" Clicked="Button_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                </cards:SfCardView>
+
+            </cards:SfCardLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

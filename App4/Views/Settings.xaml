@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App4.Views.Settings"
+             Shell.NavBarIsVisible="True"
+             BackgroundColor="#ffffff"
+             Title="Settings"
+             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             
+             >
+
+
+    <StackLayout>
+
+
+        <TableView Intent="Settings" HasUnevenRows="True">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell Height="70" >
+                        <StackLayout Orientation="Horizontal" Padding="17,10,0,0">
+                            <Label Text="Accessibility"
+                                 FontSize="14" TextColor = "{Binding HeadColorS, StringFormat='#\{0\}'}" HorizontalOptions="Start"/>
+                            <Button Text=">" Scale="0.5" HorizontalOptions="EndAndExpand" BackgroundColor="{Binding HeadColorS, StringFormat='#\{0\}'}" Clicked="Button_Clicked"/>
+
+
+                        </StackLayout>
+                    </ViewCell>
+
+                    <!--<SwitchCell x:Name="RandomSwich" Text="Notifications" OnColor="#31507F" />
+                    <SwitchCell x:Name="RandomSwih1" Text="Theme color" OnColor="#31507F"/>-->
+
+
+
+
+                    <ViewCell Height="70">
+                        <StackLayout Orientation="Horizontal" Padding="17,10,0,0">
+                            <Label Text="Font"
+                                 FontSize="14" TextColor = "{Binding HeadColorS, StringFormat='#\{0\}'}" HorizontalOptions="Start"/>
+                            <Button Text=">" Scale="0.5" HorizontalOptions="EndAndExpand" BackgroundColor="{Binding HeadColorS, StringFormat='#\{0\}'}" Clicked="ChangeFont"/>
+
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell Height="70">
+                        <StackLayout Orientation="Horizontal" Padding="17,10,0,0">
+                            <Label Text="Help"
+                                 FontSize="14" TextColor = "{Binding HeadColorS, StringFormat='#\{0\}'}" HorizontalOptions="Start"/>
+                            <Button Text=">" Scale="0.5" HorizontalOptions="EndAndExpand" BackgroundColor="{Binding HeadColorS, StringFormat='#\{0\}'}" Clicked="Help" />
+
+                        </StackLayout>
+                    </ViewCell>
+
+                </TableSection>
+
+
+            </TableRoot>
+
+
+        </TableView>
+        <StackLayout Orientation="Horizontal">
+
+
+
+
+            <Image Source="{Binding HeadColorS, StringFormat='_\{0\}.png'}" Scale="1" HorizontalOptions="EndAndExpand" VerticalOptions="End" />
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
